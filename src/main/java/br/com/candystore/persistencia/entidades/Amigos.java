@@ -1,4 +1,4 @@
-package br.com.agenda.persistencia.entidades;
+package br.com.candystore.persistencia.entidades;
 
 public class Amigos {
 	private int id;

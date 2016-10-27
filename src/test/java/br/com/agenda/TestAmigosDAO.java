@@ -1,7 +1,7 @@
 package br.com.agenda;
 
-import br.com.agenda.persistencia.entidades.Amigos;
-import br.com.agenda.persistencia.jdbc.AmigosDAO;
+import br.com.candystore.persistencia.entidades.Amigos;
+import br.com.candystore.persistencia.jdbc.AmigosDAO;
 
 public class TestAmigosDAO {
 	public static void main(String[] args) {

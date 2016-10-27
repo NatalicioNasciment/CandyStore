@@ -1,4 +1,4 @@
-package br.com.agenda.persistencia.jdbc;
+package br.com.candystore.persistencia.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

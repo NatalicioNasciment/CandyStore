@@ -1,10 +1,10 @@
-package br.com.agenda.persistencia.jdbc;
+package br.com.candystore.persistencia.jdbc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import br.com.agenda.persistencia.entidades.Amigos;
+import br.com.candystore.persistencia.entidades.Amigos;
 
 public class AmigosDAO {
 	

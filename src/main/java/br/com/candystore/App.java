@@ -1,4 +1,4 @@
-package br.com.agenda;
+package br.com.candystore;
 
 /**
  * Hello world!
