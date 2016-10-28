@@ -1,15 +1,18 @@
 package br.com.candystore.persistencia.entidades;
 
 public class Usuario {
-	private Integer id;
+	private int id;
 	private String nome;
+	private String login;
 	private String senha;
 	private String tipo;
-
-	public Integer getId() {
+	
+	public int getId(){
 		return id;
 	}
-
+	public void setId(int id){
+		this.id = id;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -17,7 +20,16 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
+	
+	public String getLogin() {
+		return login;
+	}
+	
+	public void setLogin(String login){
+		this.login = login;
+	}
+	
+	
 	public String getSenha() {
 		return senha;
 	}
@@ -33,5 +45,4 @@ public class Usuario {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-
 }
