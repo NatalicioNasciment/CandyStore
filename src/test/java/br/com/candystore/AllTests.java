@@ -14,6 +14,7 @@ import br.com.candystore.persistencia.jdbc.UsuarioDAO;
 @SuiteClasses({})
 public class AllTests {
 	
+	//teste cadastrar dando erro
 	@Test
 	public void testCadastrar(){
 		Usuario usuario = new Usuario();
@@ -23,7 +24,6 @@ public class AllTests {
 		usuario.setTipo("Administrador");
 		
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
-//		assertTrue(usuarioDAO.cadastrar(usuario));
+	
 	}
-
 }
