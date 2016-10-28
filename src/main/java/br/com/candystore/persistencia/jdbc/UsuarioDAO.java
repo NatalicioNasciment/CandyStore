@@ -10,7 +10,7 @@ public class UsuarioDAO {
 	private Connection con = conexaoFactory.getConnection();
 
 	public void cadastrar(Usuario usuario) {
-		String sql = "INSERT INTO usuario (nome, tipo,senha) VALUES(?, ?, ?)";
+		String sql = "INSERT INTO usuarios (nome, tipo,senha) VALUES(?, ?, ?)";
 
 		try {
 			PreparedStatement pst = con.prepareStatement(sql);
