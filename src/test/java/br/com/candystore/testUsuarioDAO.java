@@ -5,10 +5,10 @@ import br.com.candystore.persistencia.jdbc.UsuarioDAO;
 
 public class testUsuarioDAO {
 	public static void main(String[] args) {
-		alterar();
+		testExcluir();
 	}
 
-	public static void cadastrar() {
+	public static void testCadastrar() {
 
 		Usuario usuario = new Usuario();
 		usuario.setNome("Natalicio");
@@ -22,7 +22,7 @@ public class testUsuarioDAO {
 		System.out.println("Usuario cadastrado com sucesso!!!");
 	}
 
-	public static void alterar() {
+	public static void testAlterar() {
 		Usuario usuario = new Usuario();
 		usuario.setId(2);
 		usuario.setNome("Natalicio");
@@ -34,5 +34,15 @@ public class testUsuarioDAO {
 		usuarioDAO.alterar(usuario);
 
 		System.out.println("Usuario alterado com sucesso!!!");
+	}
+	
+	public static void testExcluir() {
+		Usuario usuario = new Usuario();
+		usuario.setId(5);
+
+		UsuarioDAO usuarioDAO = new UsuarioDAO();
+		usuarioDAO.excluir(usuario);
+
+		System.out.println("Usuario excluido com sucesso!!!");
 	}
 }
