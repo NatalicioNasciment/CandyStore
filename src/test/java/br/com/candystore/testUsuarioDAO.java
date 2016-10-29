@@ -7,8 +7,23 @@ import br.com.candystore.persistencia.jdbc.UsuarioDAO;
 
 public class testUsuarioDAO {
 	public static void main(String[] args) {
-		testBuscaTodos();
+//		testBuscaTodos();
+		testAutenticar();
 	}
+
+
+
+	private static void testAutenticar() {
+		Usuario usuario = new Usuario();
+		usuario.setLogin("liano");
+		usuario.setSenha("lianão");
+		
+		UsuarioDAO usuarioDAO = new UsuarioDAO();
+		Usuario  usuarioRetorno = usuarioDAO.autenticar(usuario);
+		System.out.println(usuarioRetorno);
+	}
+
+
 
 	public static void testCadastrar() {
 
