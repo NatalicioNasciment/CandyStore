@@ -104,8 +104,8 @@ public class UsuarioDAO {
 
 		try (PreparedStatement pst = con.prepareStatement(sql)) {
 			ResultSet resultado = pst.executeQuery();
-			
-			while(resultado.next()){
+
+			while (resultado.next()) {
 				Usuario usuario = new Usuario();
 				usuario.setId(resultado.getInt("id"));
 				usuario.setNome(resultado.getString("nome"));
@@ -116,10 +116,35 @@ public class UsuarioDAO {
 			}
 			return lista;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		return null;
 	}
+
+	public Usuario autenticar(Usuario usuarioPassado) {
+		String sql = "SELECT * FROM usuarios WHERE login = ? AND senha = ?";
+
+		try (PreparedStatement pst = con.prepareStatement(sql)) {
+			pst.setString(1, usuarioPassado.getLogin());
+			pst.setString(2, usuarioPassado.getSenha());
+
+			ResultSet resultado = pst.executeQuery();
+			if (resultado.next()) {
+				Usuario usuario = new Usuario();
+				usuario.setId(resultado.getInt("id"));
+				usuario.setNome(resultado.getString("nome"));
+				usuario.setLogin(resultado.getString("login"));
+				usuario.setSenha(resultado.getString("senha"));
+				usuario.setTipo(resultado.getString("tipo"));
+
+				return usuario;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 }
