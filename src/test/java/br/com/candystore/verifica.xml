@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+<USUARIOS NOME = "todo liano" LOGIN = "liano" SENHA = "suelly" TIPO = "adm" />
+<USUARIOS NOME = "nata" LOGIN = "nata" SENHA = "gatoso" TIPO = "vendedor" />
+<USUARIOS NOME = "gerlane" LOGIN = "gerlane" SENHA = "mimoso" TIPO = "vendedor" />
+</dataset>
